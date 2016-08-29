@@ -37,42 +37,9 @@ class Catboard: KeyboardViewController {
             textDocumentProxy.insertText(keyOutput)
             return
         }
-        
-        if key.type == .Character || key.type == .SpecialCharacter {
-            if let context = textDocumentProxy.documentContextBeforeInput {
-                if context.characters.count < 2 {
-                    textDocumentProxy.insertText(keyOutput)
-                    return
-                }
-                
-                var index = context.endIndex
-                
-                index = index.predecessor()
-                if context[index] != " " {
-                    textDocumentProxy.insertText(keyOutput)
-                    return
-                }
-                
-                index = index.predecessor()
-                if context[index] == " " {
-                    textDocumentProxy.insertText(keyOutput)
-                    return
-                }
 
-                textDocumentProxy.insertText("\(randomCat())")
-                textDocumentProxy.insertText(" ")
-                textDocumentProxy.insertText(keyOutput)
-                return
-            }
-            else {
-                textDocumentProxy.insertText(keyOutput)
-                return
-            }
-        }
-        else {
-            textDocumentProxy.insertText(keyOutput)
-            return
-        }
+        textDocumentProxy.insertText(keyOutput)
+        return
     }
     
     override func setupKeys() {
@@ -126,16 +93,4 @@ class Catboard: KeyboardViewController {
             self.view.backgroundColor = oldViewColor
         }
     }
-}
-
-func randomCat() -> String {
-    let cats = "🐱😺😸😹😽😻😿😾😼🙀"
-    
-    let numCats = cats.characters.count
-    let randomCat = arc4random() % UInt32(numCats)
-    
-    let index = cats.startIndex.advancedBy(Int(randomCat))
-    let character = cats[index]
-    
-    return String(character)
 }
