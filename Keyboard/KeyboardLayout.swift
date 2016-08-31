@@ -779,7 +779,7 @@ class KeyboardLayout: NSObject, KeyboardKeyProtocol {
             
             let mostKeysInRow: Int = {
                 var currentMax: Int = 0
-                for (i, row) in page.rows.enumerate() {
+                for (_, row) in page.rows.enumerate() {
                     currentMax = max(currentMax, row.count)
                 }
                 return currentMax
