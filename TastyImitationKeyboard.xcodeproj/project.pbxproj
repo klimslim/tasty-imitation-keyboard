@@ -108,7 +108,7 @@
 		4E6AEE4B19D246D700931E8F /* Catboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catboard.swift; sourceTree = "<group>"; };
 		4E7CDF921A079E3E0015BB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E7CDF931A079E3E0015BB90 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		4E807D9319461D9000D875D1 /* HostingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E807D9319461D9000D875D1 /* MovaKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovaKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E807DB919461DC700D875D1 /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E807DBC19461DC700D875D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E807DC81946209600D875D1 /* KeyboardKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKey.swift; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 		4E807D8A19461D9000D875D1 = {
 			isa = PBXGroup;
 			children = (
-				4E807D9519461D9000D875D1 /* HostingApp */,
+				4E807D9519461D9000D875D1 /* MovaKey */,
 				4E807DBA19461DC700D875D1 /* Keyboard */,
 				4E8EF38219F95D75009CBF5D /* KeyboardFramework */,
 				4E7CDF901A079E3E0015BB90 /* KeyboardSound */,
@@ -233,14 +233,14 @@
 		4E807D9419461D9000D875D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E807D9319461D9000D875D1 /* HostingApp.app */,
+				4E807D9319461D9000D875D1 /* MovaKey.app */,
 				4E807DB919461DC700D875D1 /* Keyboard.appex */,
 				4E8EF38119F95D74009CBF5D /* KeyboardFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E807D9519461D9000D875D1 /* HostingApp */ = {
+		4E807D9519461D9000D875D1 /* MovaKey */ = {
 			isa = PBXGroup;
 			children = (
 				4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */,
@@ -249,6 +249,7 @@
 				4EF16F9319D255030076AFCB /* Images.xcassets */,
 				4E807D9619461D9000D875D1 /* Supporting Files */,
 			);
+			name = MovaKey;
 			path = HostingApp;
 			sourceTree = "<group>";
 		};
@@ -322,9 +323,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4E807D9219461D9000D875D1 /* HostingApp */ = {
+		4E807D9219461D9000D875D1 /* MovaKey */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E807DAF19461D9000D875D1 /* Build configuration list for PBXNativeTarget "HostingApp" */;
+			buildConfigurationList = 4E807DAF19461D9000D875D1 /* Build configuration list for PBXNativeTarget "MovaKey" */;
 			buildPhases = (
 				4E807D8F19461D9000D875D1 /* Sources */,
 				4E807D9019461D9000D875D1 /* Frameworks */,
@@ -339,9 +340,9 @@
 				4E807DC319461DC700D875D1 /* PBXTargetDependency */,
 				4E8EF39719F95D75009CBF5D /* PBXTargetDependency */,
 			);
-			name = HostingApp;
+			name = MovaKey;
 			productName = TastyImitationKeyboard;
-			productReference = 4E807D9319461D9000D875D1 /* HostingApp.app */;
+			productReference = 4E807D9319461D9000D875D1 /* MovaKey.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4E807DB819461DC700D875D1 /* Keyboard */ = {
@@ -417,7 +418,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E807D9219461D9000D875D1 /* HostingApp */,
+				4E807D9219461D9000D875D1 /* MovaKey */,
 				4E807DB819461DC700D875D1 /* Keyboard */,
 				4E8EF38019F95D74009CBF5D /* KeyboardFramework */,
 			);
@@ -622,7 +623,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HostingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movekey;
+				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movakey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -638,7 +639,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HostingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movekey;
+				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movakey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -652,7 +653,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movekey.Keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movakey.Keyboard;
 				PRODUCT_NAME = Keyboard;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -667,7 +668,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movekey.Keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movakey.Keyboard;
 				PRODUCT_NAME = Keyboard;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -693,7 +694,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movekey.KeyboardFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movakey.KeyboardFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -716,7 +717,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movekey.KeyboardFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = klimko.alexey.movakey.KeyboardFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -737,7 +738,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E807DAF19461D9000D875D1 /* Build configuration list for PBXNativeTarget "HostingApp" */ = {
+		4E807DAF19461D9000D875D1 /* Build configuration list for PBXNativeTarget "MovaKey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E807DB019461D9000D875D1 /* Debug */,
