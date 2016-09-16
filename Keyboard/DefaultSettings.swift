@@ -69,8 +69,8 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
     func loadNib() {
         let assets = NSBundle(forClass: self.dynamicType).loadNibNamed("DefaultSettings", owner: self, options: nil)
         
-        if assets.count > 0 {
-            if let rootView = assets.first as? UIView {
+        if assets!.count > 0 {
+            if let rootView = assets!.first as? UIView {
                 rootView.translatesAutoresizingMaskIntoConstraints = false
                 self.addSubview(rootView)
                 

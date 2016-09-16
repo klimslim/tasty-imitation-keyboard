@@ -754,7 +754,7 @@ class KeyboardViewController: UIInputViewController {
                     let offset = min(3, beforeContext.characters.count)
                     var index = beforeContext.endIndex
                     
-                    for (var i = 0; i < offset; i += 1) {
+                    for i in 0...offset {
                         index = index.predecessor()
                         let char = beforeContext[index]
                         
