@@ -33,26 +33,26 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
     var settingsList: [(String, [String])] {
         get {
             return [
-                ("General Settings", [kAutoCapitalization, kPeriodShortcut, kKeyboardClicks]),
-                ("Extra Settings", [kSmallLowercase])
+                ("Агульныя Налады", [kAutoCapitalization, kPeriodShortcut, kKeyboardClicks]),
+                ("Дадатковыя Налады", [kLatin])
             ]
         }
     }
     var settingsNames: [String:String] {
         get {
             return [
-                kAutoCapitalization: "Auto-Capitalization",
-                kPeriodShortcut:  "“.” Shortcut",
-                kKeyboardClicks: "Keyboard Clicks",
-                kSmallLowercase: "Allow Lowercase Key Caps"
+                kAutoCapitalization: "Аўта-капiталiзацыя",
+                kPeriodShortcut:  "“.” скарачэнне",
+                kKeyboardClicks: "Нацiсканне з гукам",
+                kLatin: "Лацiнка"
             ]
         }
     }
     var settingsNotes: [String: String] {
         get {
             return [
-                kKeyboardClicks: "Please note that keyboard clicks will work only if “Allow Full Access” is enabled in the keyboard settings. Unfortunately, this is a limitation of the operating system.",
-                kSmallLowercase: "Changes your key caps to lowercase when Shift is off, making it easier to tell what mode you are in."
+                //kKeyboardClicks: "Please note that keyboard clicks will work only if “Allow Full Access” is enabled in the keyboard settings. //Unfortunately, this is a limitation of the operating system.",
+                kLatin: "Changes your key caps to lowercase when Shift is off, making it easier to tell what mode you are in."
             ]
         }
     }
@@ -69,8 +69,8 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
     func loadNib() {
         let assets = NSBundle(forClass: self.dynamicType).loadNibNamed("DefaultSettings", owner: self, options: nil)
         
-        if assets.count > 0 {
-            if let rootView = assets.first as? UIView {
+        if assets!.count > 0 {
+            if let rootView = assets!.first as? UIView {
                 rootView.translatesAutoresizingMaskIntoConstraints = false
                 self.addSubview(rootView)
                 

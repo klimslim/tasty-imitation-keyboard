@@ -18,7 +18,7 @@ func metric(name: String) -> CGFloat { return CGFloat(metrics[name]!) }
 let kAutoCapitalization = "kAutoCapitalization"
 let kPeriodShortcut = "kPeriodShortcut"
 let kKeyboardClicks = "kKeyboardClicks"
-let kSmallLowercase = "kSmallLowercase"
+let kLatin = "kLatin"
 
 class KeyboardViewController: UIInputViewController {
     
@@ -98,7 +98,7 @@ class KeyboardViewController: UIInputViewController {
             kAutoCapitalization: true,
             kPeriodShortcut: true,
             kKeyboardClicks: false,
-            kSmallLowercase: false
+            kLatin: false
         ])
         
         self.keyboard = defaultKeyboard()
@@ -217,7 +217,7 @@ class KeyboardViewController: UIInputViewController {
         }
         else {
             let uppercase = self.shiftState.uppercase()
-            let characterUppercase = (NSUserDefaults.standardUserDefaults().boolForKey(kSmallLowercase) ? uppercase : true)
+            let characterUppercase = (NSUserDefaults.standardUserDefaults().boolForKey(kLatin) ? uppercase : true)
             
             self.forwardingView.frame = orientationSavvyBounds
             self.layout?.layoutKeys(self.currentMode, uppercase: uppercase, characterUppercase: characterUppercase, shiftState: self.shiftState)
@@ -613,7 +613,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func updateKeyCaps(uppercase: Bool) {
-        let characterUppercase = (NSUserDefaults.standardUserDefaults().boolForKey(kSmallLowercase) ? uppercase : true)
+        let characterUppercase = (NSUserDefaults.standardUserDefaults().boolForKey(kLatin) ? uppercase : true)
         self.layout?.updateKeyCaps(false, uppercase: uppercase, characterUppercase: characterUppercase, shiftState: self.shiftState)
     }
     
@@ -629,7 +629,7 @@ class KeyboardViewController: UIInputViewController {
         self.shiftWasMultitapped = false
         
         let uppercase = self.shiftState.uppercase()
-        let characterUppercase = (NSUserDefaults.standardUserDefaults().boolForKey(kSmallLowercase) ? uppercase : true)
+        let characterUppercase = (NSUserDefaults.standardUserDefaults().boolForKey(kLatin) ? uppercase : true)
         self.layout?.layoutKeys(mode, uppercase: uppercase, characterUppercase: characterUppercase, shiftState: self.shiftState)
         
         self.setupKeys()
@@ -754,7 +754,7 @@ class KeyboardViewController: UIInputViewController {
                     let offset = min(3, beforeContext.characters.count)
                     var index = beforeContext.endIndex
                     
-                    for (var i = 0; i < offset; i += 1) {
+                    for i in 0...offset {
                         index = index.predecessor()
                         let char = beforeContext[index]
                         
