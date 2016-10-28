@@ -100,8 +100,11 @@ class KeyboardViewController: UIInputViewController {
             kKeyboardClicks: false,
             kLatin: false
         ])
-        
-        self.keyboard = defaultKeyboard()
+        if !NSUserDefaults.standardUserDefaults().boolForKey(kLatin) {
+            self.keyboard = defaultKeyboard()
+        } else {
+            self.keyboard = latinKeyboard()
+        }
         
         self.shiftState = .Disabled
         self.currentMode = 0
